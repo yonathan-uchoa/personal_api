@@ -7,13 +7,14 @@ import com.kaveski.yonathan.personal_api.dto.mapper.PersonMapper;
 import com.kaveski.yonathan.personal_api.exception.PersonNotFoundException;
 import com.kaveski.yonathan.personal_api.repository.PersonRepository;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 @Service
 public class PersonService {
 
@@ -21,10 +22,6 @@ public class PersonService {
 
     private PersonRepository personRepository;
 
-    @Autowired
-    public PersonService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
 
 
     public MessageResponseDTO create(PersonDTO personDTO) {
