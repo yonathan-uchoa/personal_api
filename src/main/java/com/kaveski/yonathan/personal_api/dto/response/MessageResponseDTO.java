@@ -1,4 +1,4 @@
-package com.kaveski.yonathan.personal_api.dto;
+package com.kaveski.yonathan.personal_api.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
